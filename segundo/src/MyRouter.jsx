@@ -7,6 +7,7 @@ import Home from "./Pages/Home";
 import Cadastro from "./Pages/Cadastro";
 import Sobre from "./Pages/Sobre";
 import Contato from "./Pages/Contato";
+import InfoCard from "./components/InfoCard";
 
 const router = createBrowserRouter([
     {
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
                 path:"/cont",
                 element:<Contato/>
             },
+            {
+                path:"/informacao/:id",
+                element:<InfoCard/>
+            }
 
         ],
     },
