@@ -2,10 +2,10 @@ import { useState } from 'react'
 
 import styles from "./Forms.module.css"
 
-const Forms = () => {
-    const [nome, setNome] = useState()
-    const [email, setEmail] = useState()
-    const [senha, setSenha] = useState()
+const Forms = (props) => {
+    const [nome, setNome] = useState(props ? props.nome : "")
+    const [email, setEmail] = useState(props ? props.email : "")
+    const [senha, setSenha] = useState(props ? props.senha : "")
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -15,19 +15,23 @@ const Forms = () => {
     };
 
     const handleName = (e) =>{
-        console.log(e.target.value)
+        //console.log(e.target.value)
         setNome(e.target.value)
     }
 
   return (
     <div>
-        <h4>Forms</h4>
+        <h4>adastros</h4>
         <form className={styles.formulario} onSubmit={handleSubmit}>
             {/* htmlFor - com isso na label é so clicar nela que podera digitar no input */}
             <label htmlFor="nome">Nome: </label>
-            <input type="text" id="nome" 
-            placeholder="Digite seu nome..."
-            onChange={handleName}/>
+            <input 
+             type="text" 
+             id="nome" 
+             placeholder="Digite seu nome..."
+             onChange={handleName}
+             value={nome}
+            />
             {/* Label envolvendo o input */}
             <label>
                 <span> Email:</span>
@@ -35,7 +39,7 @@ const Forms = () => {
                 placeholder="Digite seu email..."
                 onChange={(e) => {
                 setEmail(e.target.value)
-                }}/>
+                }}value={email}/>
             </label>
 
             <label>
@@ -44,7 +48,7 @@ const Forms = () => {
                 placeholder="Digite sua senha..."
                 onChange={(e) => {
                 setSenha(e.target.value)
-                }}/>
+                }}value={senha}/>
             </label>
             <input 
             type="submit" 

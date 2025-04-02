@@ -11,3 +11,4 @@ createRoot(document.getElementById('root')).render(
     <RouterProvider router={MyRouter}/>
   </StrictMode>,
 )
+
