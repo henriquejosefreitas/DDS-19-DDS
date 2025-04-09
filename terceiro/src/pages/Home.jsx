@@ -18,7 +18,7 @@ CADASTRAR
     />
     <br />
     <MyCard
-    titulo="The Prince"
+    titulo="Nintendo Switch"
     img="https://assets.nintendo.com/image/upload/ar_16:9,b_auto:border,c_lpad/b_white/f_auto/q_auto/dpr_1.5/c_scale,w_800/ncom/software/switch/70010000004519/f43ebd5cdac98ed79b9e15c399b87e2c0d354757906f90eb3bd02aa01edc01e8"
     desc="Pokémon World"
     />
