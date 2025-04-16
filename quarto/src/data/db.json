@@ -1,25 +1,32 @@
 {
   "funcionarios": [
     {
-    "id": "1",
-    "nome": "Jairo",
-    "email": "jairo@example.com",
-    "senha": "senha123",
-    "tipo": "Administrador"
+      "id": "1",
+      "nome": "Jairo",
+      "email": "jairo@example.com",
+      "senha": "senha123",
+      "tipo": "Administrador"
     },
     {
-    "id": "7",
-    "nome": "Cristiano Ronaldo",
-    "email": "cristiano.ronaldo@example.com",
-    "senha": "senha123",
-    "tipo": "Administrador"
+      "id": "7",
+      "nome": "Cristiano Ronaldo",
+      "email": "cristiano.ronaldo@example.com",
+      "senha": "senha123",
+      "tipo": "Administrador"
     },
     {
-    "id": "db1c",
-    "nome": "Rodolfo",
-    "email": "rodolfo@example.com",
-    "senha": "senha123",
-    "tipo": "Administrador"
+      "id": "db1c",
+      "nome": "Rodolfo",
+      "email": "rodolfo@example.com",
+      "senha": "senha123",
+      "tipo": "Administrador"
+    },
+    {
+      "id": "b06e",
+      "nome": "Donburger",
+      "email": "saefd@f.com",
+      "senha": "Qw!@1234",
+      "tipo": "Administrador"
     }
   ]
 }
