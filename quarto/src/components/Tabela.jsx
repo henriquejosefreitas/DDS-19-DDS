@@ -1,5 +1,6 @@
 // Importação dos componentes do Bootstrap
 import Table from "react-bootstrap/Table";
+import Button from "react-bootstrap/Button";
 
 import {getFuncionarios} from "../hooks/useApi"
 

@@ -7,8 +7,8 @@ import Button from "react-bootstrap/Button";
 // Importação do hook do React Hook Form para lidar com o formulário
 import { useForm } from "react-hook-form";
 
-import { addFuncionario } from "../hooks/useApi";
-const Cadastro = () => {
+import { editarFuncionario } from "../hooks/useApi";
+const Editar = () => {
   // Hook useForm para gerenciar o estado do formulário
   // register: função para registrar os campos do formulário
   // handleSubmit: função para lidar com o envio do formulário
@@ -22,7 +22,7 @@ const Cadastro = () => {
   // Função chamada quando o formulário é enviado com sucesso
   const onSubmit = (data) => {
     console.log("Dados:", data);
-    addFuncionario(data)
+    editarFuncionario(data)
     window.location.reload();
     alert("Funcionario cadastrado com sucesso")
   };
@@ -34,11 +34,31 @@ const Cadastro = () => {
 
   return (
     <div>
-      <h1>Cadastro</h1>
+      <h1>Editar</h1>
       <form
         className={styles.formulario}
         onSubmit={handleSubmit(onSubmit, onError)}
       >
+            {/* Caixinha de id */}
+        <FloatingLabel
+                controlId="floatingInputId"
+                label="Id"
+                className="mb-4 w-100"
+            >
+                <Form.Control
+                    size="lg"
+                    type="text"
+                    placeholder=""
+                    {...register("id", {
+                    required: "O id é obrigatório",
+                    minLength: {
+                    value: 1,
+                    message: "O id deve ter pelo menos 1 caractere",
+                    }
+                })}
+            />
+            {errors.id && <p className={styles.error}>{errors.id.message}</p>}
+        </FloatingLabel>
         {/* Caixinha de nome */}
         <FloatingLabel
           controlId="floatingInputNome"
@@ -142,7 +162,7 @@ const Cadastro = () => {
         <Button
           as="input"
           type="submit"
-          value="Cadastrar"
+          value="Editar"
           className="mb-4 w-30 mx-auto"
         />
       </form>
@@ -150,4 +170,4 @@ const Cadastro = () => {
   );
 };
 
-export default Cadastro;
+export default Editar;
